@@ -262,6 +262,13 @@ form textarea {
 	margin-bottom: 20px;
 }
 
+footer {
+	background-color: #1c6474;
+	padding-block: 2em;
+	color: white;
+	text-align: center;
+}
+
 input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
