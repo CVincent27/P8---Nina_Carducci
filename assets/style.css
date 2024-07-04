@@ -92,10 +92,11 @@ body {
 	width: 60%;
 }
 
-#about-me p {
+.about-me__content {
 	width: 80%;
 	font-size: 14px;
 }
+
 
 #gallery {
 	min-height: 100vh;
@@ -300,8 +301,8 @@ input[type="submit"] {
 		margin-bottom: 1em;
 	}
 
-	#about-me h6,
-	#about-me p {
+	#about-me .about-me__introduction,
+	#about-me .about-me__content {
 		width: 100%;
 	}
 }
@@ -309,7 +310,6 @@ input[type="submit"] {
 @media all and (max-width: 1000px) {
 	#about {
 		flex-direction: column;
-
 	}
 
 	.picture {
