@@ -2,10 +2,10 @@
 <html lang="fr">
 
 <head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio de Nina Carducci, photographe professionnelle à Bordeaux." />
-  <meta charset="UTF-8" />
-
+  
   <!-- balise meta OG (openGraph): Facbook, linkedin... -->
   <meta property="og:title" content="Nina Carducci - Photographe - Bordeaux" />
   <meta property="og:description" content="Portfolio de Nina Carducci, photographe professionnelle à Bordeaux." />
@@ -21,10 +21,11 @@
   <meta name="twitter:image" content="assets/images/nina.webp" />
 
   <!-- Script js -->
-  <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-  </script>
+    </script>
+  <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
+
   <script src="./assets/maugallery.js" defer></script>
   <script src="./assets/scripts.js" defer></script>
 
@@ -33,10 +34,15 @@
   <link rel="stylesheet" href="./assets/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
+
+  <link rel="preload"
     href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-    rel="stylesheet"
-  />
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+      rel="stylesheet" type="text/css" />
+  </noscript>
 
   <script type="application/ld+json">
     {
@@ -63,21 +69,19 @@
 </head>
 
 <body>
-  <header>
-    <nav class="top-header">
-      <h1 class="name">Nina Carducci</h1>
-      <div class="nav">
-        <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#services">Service</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img
-                src="assets/images/instagram.webp" alt="Logo d'Instagram" /></a>
-          </li>
-        </ul>
-      </div>
+  <header class="top-header">
+    <h1 class="name">Nina Carducci</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img
+              src="assets/images/instagram.webp" alt="Logo d'Instagram" /></a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -97,8 +101,8 @@
               <source srcset="
                     ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash_min_mobile.webp
                   " media="(max-width: 768px)" sizes="768px" />
-              <img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash_min.webp" class="d-block w-100"
-                alt="Photo d'un homme de dos" />
+              <img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash_min.webp" loading="lazy"
+                class="d-block w-100" alt="Photo d'un homme de dos" />
             </picture>
           </div>
           <div class="carousel-item">
@@ -106,8 +110,8 @@
               <source srcset="
                     ./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash_min_mobile.webp
                   " media="(max-width: 768px)" sizes="768px" />
-              <img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash_min.webp" class="d-block w-100"
-                alt="Une foule lors d'un concert" />
+              <img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash_min.webp" loading="lazy"
+                class="d-block w-100" alt="Une foule lors d'un concert" />
             </picture>
           </div>
           <div class="carousel-item">
@@ -115,8 +119,8 @@
               <source srcset="
                     ./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash_min_mobile.webp
                   " media="(max-width: 768px)" sizes="768px" />
-              <img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash_min.webp" class="d-block w-100"
-                alt="Deux mariés s'embrassent" />
+              <img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash_min.webp" loading="lazy"
+                class="d-block w-100" alt="Deux mariés s'embrassent" />
             </picture>
           </div>
         </div>
@@ -134,7 +138,7 @@
     </section>
     <section id="about">
       <div class="picture left">
-        <img src="./assets/images/nina.webp" alt="Photo de Nina" />
+        <img src="./assets/images/nina.webp" loading="lazy" alt="Nina Carducci" />
       </div>
       <div id="about-me">
         <h2 class="about-me__title">A propos de moi</h2>
@@ -160,7 +164,7 @@
     <section id="gallery">
       <h2 class="title">Portfolio</h2>
       <div class="container py-3">
-        <div class="gallery" style="display: none">
+        <div class="gallery">
           <img data-gallery-tag="Concert" class="gallery-item img-fluid"
             src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Photo d'un concert" />
           <img data-gallery-tag="Entreprises" class="gallery-item img-fluid" loading="lazy"
@@ -191,13 +195,13 @@
       <aside class="quote">
         <figure>
           <blockquote>
-            <h2 class="quote__text">
+            <p class="quote__text">
               Un portrait n’est pas une ressemblance. Dès lors qu’une émotion
               ou qu’un fait est traduit en photo, il cesse d’être un fait pour
               devenir une opinion. L’inexactitude n’existe pas en
               photographie. Toutes les photos sont exactes. Aucune d’elles
               n’est la vérité.
-            </h2>
+            </p>
           </blockquote>
           <figcaption class="quote__author">- Richard Avedon</figcaption>
         </figure>
@@ -216,7 +220,7 @@
             </p>
           </div>
           <div class="service__price">
-            <h4>350€/demi journée</h4>
+            <h3>350€/demi journée</h3>
             <span>Matériel, déplacement inclus</span>
           </div>
         </div>
@@ -230,7 +234,7 @@
             </p>
           </div>
           <div class="service__price">
-            <h4>50€/photo</h4>
+            <h3>50€/photo</h3>
             <span>2 AR par photo</span>
           </div>
         </div>
@@ -243,7 +247,7 @@
             </p>
           </div>
           <div class="service__price">
-            <h4>400€ album A4</h4>
+            <h3>400€ album A4</h3>
             <span>30 pages recto/verso</span>
           </div>
         </div>
@@ -252,11 +256,11 @@
     <aside class="quote">
       <figure>
         <blockquote>
-          <h1 class="quote__text">
+          <p class="quote__text">
             De manière inconsciente, je crois, je guette un regard, une
             expression, des traits ou une nostalgie capable de résumer ou plus
             exactement de révéler une vie
-          </h1>
+          </p>
         </blockquote>
         <figcaption class="quote__author">- Richard Avedon</figcaption>
       </figure>
@@ -291,20 +295,10 @@
         <span>68 avenue Alsace-Lorraine</span>, <span>Bordeaux</span>,
         <span>33200</span>
       </address>
-      <p>Téléphone : <a>05 56 67 78 89</a></p>
-      <p>Horaires d'ouverture : Lundi - Vendredi de 10h à 19h.</p>
+      <p>Téléphone : <a href="tel:+335 56 67 78 89">05 56 67 78 89</a><br>
+        Horaires d'ouverture : Lundi - Vendredi de 10h à 19h.</p>
     </div>
   </footer>
-  <!-- Script js
-    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      defer
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script> -->
 </body>
 
 </html>
