@@ -71,6 +71,7 @@ body {
 
 .picture img {
 	width: 100%;
+	height: auto;
 
 }
 
@@ -271,6 +272,12 @@ footer {
 	padding-block: 2em;
 	color: white;
 	text-align: center;
+
+	p {
+		a {
+			color: white;
+		}
+	}
 }
 
 input[type="submit"] {
