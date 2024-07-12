@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $('.gallery').mauGallery({
+document.addEventListener('DOMContentLoaded', function() {
+    mauGallery('.gallery', {
         columns: {
             xs: 1,
             sm: 2,

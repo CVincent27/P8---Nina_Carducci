@@ -21,16 +21,16 @@
   <meta name="twitter:image" content="assets/images/nina.webp" />
 
   <!-- Script js -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/bootstrap/bootstrap.bundle.min.js"
+    defer></script> -->
 
-  <script src="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/maugallery.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/scripts.js" defer></script>
+  <!-- <script src="./assets/maugallery.js" defer></script>
+  <script src="./assets/scripts.js" defer></script> -->
+  <script src="./assets/new_script.js" defer></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/style.css" />
+  <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/bootstrap/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="./assets/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" defer />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -85,55 +85,42 @@
   </header>
   <main>
     <section id="header">
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel" data-bs-ride="carousel">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+            <button type="button" data-bs-target=".carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target=".carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target=".carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <picture>
-              <source srcset="
-                    ./assets/images/slider/ryoji-iwata-unsplash_min.webp
-                  " media="(max-width: 768px)" sizes="768px" />
-              <img src="./assets/images/slider/ryoji-iwata-unsplash.webp" class="d-block w-100"
-                alt="Photo d'un homme de dos" />
-            </picture>
-          </div>
-          <div class="carousel-item">
-            <picture>
-              <source srcset="
-                    ./assets/images/slider/nicholas-green-unsplash_min.webp
-                  " media="(max-width: 768px)" sizes="768px" />
-              <img src="./assets/images/slider/nicholas-green-unsplash.webp" loading="lazy" class="d-block w-100"
-                alt="Une foule lors d'un concert" />
-            </picture>
-          </div>
-          <div class="carousel-item">
-            <picture>
-              <source srcset="
-                    ./assets/images/slider/edward-cisneros-unsplash_min.webp
-                  " media="(max-width: 768px)" sizes="768px" />
-              <img src="./assets/images/slider/edward-cisneros-unsplash.webp" loading="lazy" class="d-block w-100"
-                alt="Deux mariés s'embrassent" />
-            </picture>
-          </div>
+            <div class="carousel-item active">
+                <picture>
+                    <source srcset="./assets/images/slider/ryoji-iwata-unsplash_min.webp" media="(max-width: 768px)" sizes="768px" />
+                    <img src="./assets/images/slider/ryoji-iwata-unsplash.webp" class="d-block w-100" alt="Photo d'un homme de dos" />
+                </picture>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source srcset="./assets/images/slider/nicholas-green-unsplash_min.webp" media="(max-width: 768px)" sizes="768px" />
+                    <img src="./assets/images/slider/nicholas-green-unsplash.webp" loading="lazy" class="d-block w-100" alt="Une foule lors d'un concert" />
+                </picture>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source srcset="./assets/images/slider/edward-cisneros-unsplash_min.webp" media="(max-width: 768px)" sizes="768px" />
+                    <img src="./assets/images/slider/edward-cisneros-unsplash.webp" loading="lazy" class="d-block w-100" alt="Deux mariés s'embrassent" />
+                </picture>
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button class="carousel-prev" type="button" data-bs-target=".carousel" data-bs-slide="prev">
+            <span class="carousel-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-next" type="button" data-bs-target=".carousel" data-bs-slide="next">
+            <span class="carousel-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
+    
     </section>
     <section>
       <div id="about">
@@ -280,7 +267,8 @@
         </form>
       </div>
       <div class="picture right">
-        <img src="./assets/images/camera.webp" loading="lazy" width="548" height="548" alt="Photo d'un appareil photo" />
+        <img src="./assets/images/camera.webp" loading="lazy" width="548" height="548"
+          alt="Photo d'un appareil photo" />
       </div>
     </div>
   </section>
