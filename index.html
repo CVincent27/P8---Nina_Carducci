@@ -26,7 +26,8 @@
 
   <!-- <script src="./assets/maugallery.js" defer></script>
   <script src="./assets/scripts.js" defer></script> -->
-  <script src="./assets/new_script.js" defer></script>
+  <script src="./assets/carousel.js" defer></script>
+  <script src="./assets/filters.js" defer></script>
 
   <!-- <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/bootstrap/bootstrap.min.css" /> -->
@@ -151,7 +152,14 @@
     </section>
     <section id="gallery">
       <h2 class="title">Portfolio</h2>
-      <div class="container py-3">
+      <div class="container-gallery">
+        <ul class="filters">
+          <li class="nav-item"><span class="nav-link active-filter" data-filter="all">Tous</span></li>
+          <li class="nav-item"><span class="nav-link" data-filter="Concert">Concerts</span></li>
+          <li class="nav-item"><span class="nav-link" data-filter="Entreprises">Entreprises</span></li>
+          <li class="nav-item"><span class="nav-link" data-filter="Mariages">Mariages</span></li>
+          <li class="nav-item"><span class="nav-link" data-filter="Portrait">Portraits</span></li>
+        </ul>
         <div class="gallery">
           <img data-gallery-tag="Concert" class="gallery-item" loading="lazy"
             src="./assets/images/gallery/concerts/aaron-paul-concert.webp" alt="Concert aaron-paul">
@@ -189,6 +197,8 @@
         </figure>
       </aside>
     </section>
+    
+    
     <section id="services">
       <h2 class="title">Mes services</h2>
       <div class="container">
