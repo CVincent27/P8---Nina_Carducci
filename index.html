@@ -28,6 +28,8 @@
   <script src="./assets/scripts.js" defer></script> -->
   <script src="./assets/carousel.js" defer></script>
   <script src="./assets/filters.js" defer></script>
+  <script src="./assets/modal.js" defer></script>
+
 
   <!-- <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/CVincent27/P8---Nina_Carducci@main/assets/bootstrap/bootstrap.min.css" /> -->
@@ -151,52 +153,48 @@
       </div>
     </section>
     <section id="gallery">
-      <h2 class="title">Portfolio</h2>
-      <div class="container-gallery">
-        <ul class="filters">
-          <li class="nav-item"><span class="nav-link active-filter" data-filter="all">Tous</span></li>
-          <li class="nav-item"><span class="nav-link" data-filter="Concert">Concerts</span></li>
-          <li class="nav-item"><span class="nav-link" data-filter="Entreprises">Entreprises</span></li>
-          <li class="nav-item"><span class="nav-link" data-filter="Mariages">Mariages</span></li>
-          <li class="nav-item"><span class="nav-link" data-filter="Portrait">Portraits</span></li>
-        </ul>
-        <div class="gallery">
-          <img data-gallery-tag="Concert" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/concerts/aaron-paul-concert.webp" alt="Concert aaron-paul">
-          <img data-gallery-tag="Entreprises" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/entreprise/ali-morshedlou-entreprise.webp" alt="Entrepreneur ali-morshedlou">
-          <img data-gallery-tag="Entreprises" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/entreprise/jason-goodman-entreprise.webp" alt="Entrepreneurs jason-goodman">
-          <img data-gallery-tag="Mariages" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/mariage/hannah-busing-mariage.webp" alt="Mains Mariage hannah-busing">
-          <img data-gallery-tag="Portrait" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/portraits/ade-tunji-portraits.webp" alt="Portrait ade-tunji">
-          <img data-gallery-tag="Mariages" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/mariage/jakob-owens-mariage.webp" alt="Mariés sous un Palmier">
-          <img data-gallery-tag="Portrait" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/portraits/nino-van-prattenburg-portrait.webp" alt="Femme Portrait Lunettes">
-          <img data-gallery-tag="Concert" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/concerts/austin-neill-concert.webp" alt="Concert austin-neill">
-          <img data-gallery-tag="Entreprises" class="gallery-item" loading="lazy"
-            src="./assets/images/gallery/entreprise/mateus-campos-felipe-entreprise.webp"
-            alt="Femme qui travaille sur un ordinateur">
-        </div>
-      </div>
-      <aside class="quote">
-        <figure>
-          <blockquote>
-            <p class="quote__text">
-              Un portrait n’est pas une ressemblance. Dès lors qu’une émotion
-              ou qu’un fait est traduit en photo, il cesse d’être un fait pour
-              devenir une opinion. L’inexactitude n’existe pas en
-              photographie. Toutes les photos sont exactes. Aucune d’elles
-              n’est la vérité.
-            </p>
-          </blockquote>
-          <figcaption class="quote__author">- Richard Avedon</figcaption>
-        </figure>
-      </aside>
-    </section>
+  <h2 class="title">Portfolio</h2>
+  <div class="container-gallery">
+    <ul class="filters">
+      <li class="nav-item"><span class="nav-link active-filter" data-filter="all">Tous</span></li>
+      <li class="nav-item"><span class="nav-link" data-filter="Concert">Concerts</span></li>
+      <li class="nav-item"><span class="nav-link" data-filter="Entreprises">Entreprises</span></li>
+      <li class="nav-item"><span class="nav-link" data-filter="Mariages">Mariages</span></li>
+      <li class="nav-item"><span class="nav-link" data-filter="Portrait">Portraits</span></li>
+    </ul>
+    <div class="gallery">
+      <img data-gallery-tag="Concert" class="gallery-item" loading="lazy" src="./assets/images/gallery/concerts/aaron-paul-concert.webp" alt="Concert aaron-paul" onclick="openModal(1)">
+      <img data-gallery-tag="Entreprises" class="gallery-item" loading="lazy" src="./assets/images/gallery/entreprise/ali-morshedlou-entreprise.webp" alt="Entrepreneur ali-morshedlou" onclick="openModal(2)">
+      <img data-gallery-tag="Entreprises" class="gallery-item" loading="lazy" src="./assets/images/gallery/entreprise/jason-goodman-entreprise.webp" alt="Entrepreneurs jason-goodman" onclick="openModal(3)">
+      <img data-gallery-tag="Mariages" class="gallery-item" loading="lazy" src="./assets/images/gallery/mariage/hannah-busing-mariage.webp" alt="Mains Mariage hannah-busing" onclick="openModal(4)">
+      <img data-gallery-tag="Portrait" class="gallery-item" loading="lazy" src="./assets/images/gallery/portraits/ade-tunji-portraits.webp" alt="Portrait ade-tunji" onclick="openModal(5)">
+      <img data-gallery-tag="Mariages" class="gallery-item" loading="lazy" src="./assets/images/gallery/mariage/jakob-owens-mariage.webp" alt="Mariés sous un Palmier" onclick="openModal(6)">
+      <img data-gallery-tag="Portrait" class="gallery-item" loading="lazy" src="./assets/images/gallery/portraits/nino-van-prattenburg-portrait.webp" alt="Femme Portrait Lunettes" onclick="openModal(7)">
+      <img data-gallery-tag="Concert" class="gallery-item" loading="lazy" src="./assets/images/gallery/concerts/austin-neill-concert.webp" alt="Concert austin-neill" onclick="openModal(8)">
+      <img data-gallery-tag="Entreprises" class="gallery-item" loading="lazy" src="./assets/images/gallery/entreprise/mateus-campos-felipe-entreprise.webp" alt="Femme qui travaille sur un ordinateur" onclick="openModal(9)">
+    </div>
+  </div>
+  <aside class="quote">
+    <figure>
+      <blockquote>
+        <p class="quote__text">
+          Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
+        </p>
+      </blockquote>
+      <figcaption class="quote__author">- Richard Avedon</figcaption>
+    </figure>
+  </aside>
+
+  <!-- Section modale -->
+  <div class="modal" id="gallery-modal">
+    <div class="modal-content">
+      <img id="modal-image" src="" alt="">
+      <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+      <a class="next" onclick="nextSlide(1)">&#10095;</a>
+      
+    </div>
+  </div>
+</section>
     
     
     <section id="services">
